@@ -1,0 +1,58 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img class="img-fluid" style="width: 100px" src="/assets/booklogo.jpg" alt="">
+                </div>
+                <h1 class="text-center">Register here !!</h1>
+                  <form action="">
+                        <mat-form-field class="full-width" >
+                            <mat-label>Full Name</mat-label>
+                            <input type="text" matInput  name="" id="">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" >
+                            <mat-label>Phone</mat-label>
+                            <input type="number" matInput name="" id="">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="full-width" >
+                            <mat-label>email</mat-label>
+                            <input type="email" matInput name="" id="">
+                        </mat-form-field>
+                        <br>
+                        
+                        <mat-form-field class="full-width" >
+                            <mat-label>password</mat-label>
+                            <input type="password" [(ngModel)]="pass" matInput name="" id="" >
+                        </mat-form-field>
+                        <mat-form-field class="full-width" >
+                            <mat-label>confirm Password</mat-label>
+                            <input type="password"  matInput name="" id="" [(ngModel)]="cpass">
+                           
+                        </mat-form-field>
+                        {{msg}}
+                       
+                        
+                            
+
+                       
+                       <table>
+                           <tr> <td><div class="container full-width">
+                            <button type="submit" (click)="check()" mat-raised-button color="primary">Register</button>
+                        </div></td>
+
+                        <td><div class="container full-width">
+                            <button type="reset" mat-raised-button color="accent">reset</button>
+                        </div></td></tr>
+                       </table>
+
+                   
+                       
+                  </form>
+            </div>
+
+        </div>
+    </div>
+</div>

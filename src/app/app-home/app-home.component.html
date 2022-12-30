@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BookStore</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/dbed6b114.js"
+        crossorigin="anonymous"></script>
+        <link rel= "icon" href= "/assets/book.jpg" type="assets/jpg">
+    </head>
+    <body>
+        <header class = "header" id = "header">
+            <div class= "head-top">
+                <div class= "site-name">
+                    <span>JAb 4 Group 8 Project</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+            <div class= "head-bottom flex">
+                <h2>Welcome To our CropDeal App</h2>
+                <P>
+                    •	You will be able to add as well as delete books from the database
+                    	You can add any book to the favourite list.
+                        and can view each book individually
+
+                </P>
+                <button type = "button" class="head-btn">GET STARTED</button>
+            </div>
+        </header>
+        <div class= "sidenav" id= "sidenav">
+            <span class= "cancel-btn" id= "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+            <ul class = "navbar">
+                <li><a href = "#header">home</a></li>
+                <li><a href = "#Addbook">AddBook</a></li>
+                <li><a href = "#books">books</a></li>
+            </ul>
+            <button class="btn sign-up">sign up</button>
+            <button class="btn log-in">log in</button>
+        </div>
+        <div id = "modal"></div>
+        <section class = "Addbook sec-width" id= "Addbook">
+            <div class= "title">
+                <h2><a routerLink="/addBook"><button mat-raised-button>AddBook to Favourite List</button></a></h2>
+            </div>
+            <br>
+            <br>
+            <div class= "title">
+                <h2><button mat-raised-button>DeleteBook to Favourite List</button></h2>
+            </div>      
+           
+          
+        
+        <div >
+            <h2>Books Favourite List</h2>
+            <table style="font-size: 25px;" border="0" width="/" height="/" cellspacing="2" cellpadding="5">
+                <tr bgcolor="#EC9D27" >
+                    <th style="color:#ffffff" align="left">Name</th>
+                    <th style="color:#ffffff" align="left">Author</th>
+                    <th style="color:#ffffff" align="left">Genre</th>
+                    <th style="color:#ffffff" align="left">Description</th>
+                   
+                </tr>
+        
+                <tr bgcolor="#f3efef" *ngFor="let b of books">
+
+                    <td> <b> {{b.name}}</b></td>
+                    <td><b>{{b.genre | lowercase}}</b></td>
+                    <td><b>{{b.author}}</b></td>
+                    <td><b>{{b.desc}}</b></td>
+                   
+                </tr>
+                </table>
+        </div>
+        
+               
+                        <button type = "button" class = "btn">buy now</button>
+                    
+            
+               
+          
+        </section>
+        <script src="script.js"></script>                                       
